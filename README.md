@@ -93,9 +93,6 @@ MONGO_URI=YOUR_MONGODB_URI
 JWT_SECRET=YOUR_SECRET_KEY
 ```
 
-## 📸 Screenshots
-
-> Add screenshots of the Login Page, Dashboard, Analytics, and AI Features here.
 
 ## 🎯 Future Enhancements
 
@@ -121,7 +118,7 @@ Contributions are welcome!
 
 **Raghav Gupta**
 
-📧 Email: your-email@example.com
+📧 Email: raghavgupta805288@gmail.com
 
 🌐 GitHub: https://github.com/Raghav335
 
