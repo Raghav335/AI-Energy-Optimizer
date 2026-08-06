@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:5000/api/auth";
+const API_URL = "https://ai-energy-optimizer-backend.onrender.com/api/auth";
 
 // Register
 export const register = async (userData) => {
