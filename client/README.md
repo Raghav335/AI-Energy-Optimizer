@@ -1,16 +1,131 @@
-# React + Vite
+# ⚡ AI Energy Optimizer
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+An AI-powered web application that helps users monitor, analyze, and optimize their electricity consumption. The platform provides smart energy insights, real-time analytics, secure authentication, and an intuitive dashboard to promote efficient energy usage.
 
-Currently, two official plugins are available:
+## 🌐 Live Demo
+https://ai-energy-optimizer-zeta.vercel.app
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Features
 
-## React Compiler
+- 🔐 Secure User Authentication (JWT)
+- 👤 User Registration & Login
+- 📊 Interactive Energy Analytics Dashboard
+- ⚡ Smart Energy Monitoring
+- 📈 Consumption Reports & Visual Charts
+- 🤖 AI-Based Energy Optimization
+- 🌙 Modern & Responsive UI
+- 📱 Mobile-Friendly Design
+- ☁️ Cloud Deployment (Vercel + Render)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Tech Stack
 
-## Expanding the Oxlint configuration
+### Frontend
+- React.js
+- Vite
+- Tailwind CSS
+- React Router DOM
+- Axios
+- Recharts
+- Framer Motion
+- Lucide React
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+### Backend
+- Node.js
+- Express.js
+- MongoDB Atlas
+- JWT Authentication
+- bcrypt.js
+
+### Deployment
+- Frontend: Vercel
+- Backend: Render
+
+## 📂 Project Structure
+
+```
+AI-Energy-Optimizer/
+│── client/
+│   ├── src/
+│   ├── public/
+│   ├── package.json
+│   └── vite.config.js
+│
+│── server/
+│   ├── controllers/
+│   ├── routes/
+│   ├── models/
+│   ├── middleware/
+│   ├── config/
+│   └── server.js
+```
+
+## 🚀 Installation
+
+### Clone Repository
+
+```bash
+git clone https://github.com/Raghav335/AI-Energy-Optimizer.git
+```
+
+### Frontend
+
+```bash
+cd client
+npm install
+npm run dev
+```
+
+### Backend
+
+```bash
+cd server
+npm install
+npm start
+```
+
+## 🔑 Environment Variables
+
+Create a `.env` file inside the **server** folder.
+
+```env
+PORT=5000
+MONGO_URI=YOUR_MONGODB_URI
+JWT_SECRET=YOUR_SECRET_KEY
+```
+
+
+## 🎯 Future Enhancements
+
+- 🤖 AI Chat Assistant
+- 📊 Energy Consumption Prediction
+- 🌦️ Weather-Based Optimization
+- 📄 PDF & CSV Report Export
+- 🔔 Smart Notifications
+- 🌍 Multi-language Support
+- 📱 Progressive Web App (PWA)
+
+## 🤝 Contributing
+
+Contributions are welcome!
+
+1. Fork the repository
+2. Create a new branch
+3. Commit your changes
+4. Push your branch
+5. Open a Pull Request
+
+## 👨‍💻 Developer
+
+**Raghav Gupta**
+
+📧 Email: raghavgupta805288@gmail.com
+
+🌐 GitHub: https://github.com/Raghav335
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+---
+
+⭐ If you like this project, don't forget to star the repository!
