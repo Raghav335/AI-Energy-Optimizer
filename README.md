@@ -99,7 +99,6 @@ JWT_SECRET=YOUR_SECRET_KEY
 - 🤖 AI Chat Assistant
 - 📊 Energy Consumption Prediction
 - 🌦️ Weather-Based Optimization
-- 📄 PDF & CSV Report Export
 - 🔔 Smart Notifications
 - 🌍 Multi-language Support
 - 📱 Progressive Web App (PWA)
