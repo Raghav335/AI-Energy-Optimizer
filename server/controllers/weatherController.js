@@ -4,40 +4,28 @@ export const getWeather = async (req, res) => {
   try {
     const city = req.params.city;
 
-    // City ko coordinates me convert karo
-    const geo = await axios.get(
-      `https://geocoding-api.open-meteo.com/v1/search?name=${city}&count=1`
-    );
+    const apiKey = process.env.WEATHER_API_KEY;
 
-    if (!geo.data.results || geo.data.results.length === 0) {
-      return res.status(404).json({
-        success: false,
-        message: "City not found",
-      });
-    }
-
-    const { latitude, longitude, name, country } = geo.data.results[0];
-
-    // Real weather data
-    const weather = await axios.get(
-      `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current=temperature_2m,relative_humidity_2m,wind_speed_10m`
+    const response = await axios.get(
+      `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`
     );
 
     res.json({
       success: true,
-      city: name,
-      country,
-      temperature: weather.data.current.temperature_2m,
-      humidity: weather.data.current.relative_humidity_2m,
-      windSpeed: weather.data.current.wind_speed_10m,
+      city: response.data.name,
+      country: response.data.sys.country,
+      temperature: response.data.main.temp,
+      humidity: response.data.main.humidity,
+      windSpeed: response.data.wind.speed,
+      description: response.data.weather[0].description,
     });
 
   } catch (error) {
-    console.log(error.message);
+    console.error(error.response?.data || error.message);
 
     res.status(500).json({
       success: false,
-      message: "Weather fetch failed",
+      message: error.response?.data?.message || error.message,
     });
   }
 };
