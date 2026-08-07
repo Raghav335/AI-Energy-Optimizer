@@ -19,9 +19,9 @@ function LoadChart() {
 
   const fetchAnalytics = async () => {
     try {
-      const res = await axios.get(
-        "http://localhost:5000/api/analytics"
-      );
+     const res = await axios.get(
+  "https://ai-energy-optimizer-backend.onrender.com/api/analytics"
+);
 
       const time = new Date().toLocaleTimeString([], {
         hour: "2-digit",
