@@ -49,7 +49,7 @@ function Login() {
             <div>
 
               <h1 className="text-3xl font-bold">
-                AI Power Optimizer
+                AI Energy Optimizer
               </h1>
 
               <p className="text-blue-200">
