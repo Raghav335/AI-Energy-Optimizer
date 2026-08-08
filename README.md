@@ -91,6 +91,7 @@ Create a `.env` file inside the **server** folder.
 PORT=5000
 MONGO_URI=YOUR_MONGODB_URI
 JWT_SECRET=YOUR_SECRET_KEY
+Wether_API= Your_Wether_API
 ```
 
 
@@ -98,10 +99,8 @@ JWT_SECRET=YOUR_SECRET_KEY
 
 - 🤖 AI Chat Assistant
 - 📊 Energy Consumption Prediction
-- 🌦️ Weather-Based Optimization
 - 🔔 Smart Notifications
 - 🌍 Multi-language Support
-- 📱 Progressive Web App (PWA)
 
 ## 🤝 Contributing
 
