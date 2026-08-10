@@ -1,18 +1,24 @@
 # ⚡ AI Energy Optimizer
 
-An AI-powered web application that helps users monitor, analyze, and optimize their electricity consumption. The platform provides smart energy insights, real-time analytics, secure authentication, and an intuitive dashboard to promote efficient energy usage.
+An AI-powered web application designed to monitor, analyze, and predict energy consumption. The platform combines real-time energy analytics, weather data, secure authentication, interactive charts, and a Python-based Machine Learning service to provide intelligent energy insights.
 
 ## 🌐 Live Demo
+
 https://ai-energy-optimizer-zeta.vercel.app
 
 ## ✨ Features
 
 - 🔐 Secure User Authentication (JWT)
 - 👤 User Registration & Login
+- 🧑‍💻 Dynamic Logged-in User Profile
 - 📊 Interactive Energy Analytics Dashboard
-- ⚡ Smart Energy Monitoring
-- 📈 Consumption Reports & Visual Charts
-- 🤖 AI-Based Energy Optimization
+- ⚡ Real-Time Energy Monitoring
+- 📈 Live Energy Analytics & Charts
+- 🤖 AI-Based Energy Demand Prediction
+- 🐍 Python & Machine Learning Integration
+- 🌦️ Real-Time Weather Data
+- ☀️ Solar Output Monitoring
+- ⚡ Grid Frequency Monitoring
 - 🌙 Modern & Responsive UI
 - 📱 Mobile-Friendly Design
 - ☁️ Cloud Deployment (Vercel + Render)
@@ -20,110 +26,170 @@ https://ai-energy-optimizer-zeta.vercel.app
 ## 🛠️ Tech Stack
 
 ### Frontend
+
 - React.js
 - Vite
 - Tailwind CSS
 - React Router DOM
 - Axios
 - Recharts
-- Framer Motion
 - Lucide React
 
 ### Backend
+
 - Node.js
 - Express.js
 - MongoDB Atlas
 - JWT Authentication
 - bcrypt.js
+- Axios
+
+### AI / Machine Learning
+
+- Python
+- Flask
+- Flask-CORS
+- Machine Learning Model
+- REST API
 
 ### Deployment
+
 - Frontend: Vercel
-- Backend: Render
+- Node.js Backend: Render
+- AI Backend: Render
+- Database: MongoDB Atlas
 
 ## 📂 Project Structure
 
-```
+```text
 AI-Energy-Optimizer/
-│── client/
+│
+├── client/
 │   ├── src/
 │   ├── public/
 │   ├── package.json
 │   └── vite.config.js
 │
-│── server/
+├── server/
 │   ├── controllers/
 │   ├── routes/
 │   ├── models/
-│   ├── middleware/
 │   ├── config/
+│   ├── utils/
 │   └── server.js
-```
+│
+├── ai/
+│   ├── app.py
+│   ├── model.py
+│   ├── requirements.txt
+│   └── data/
+│
+└── README.md
 
-## 🚀 Installation
+##🚀 Installation ##
 
-### Clone Repository
-
-```bash
+#Clone Repository#
 git clone https://github.com/Raghav335/AI-Energy-Optimizer.git
-```
+cd AI-Energy-Optimizer
 
-### Frontend
+##Frontend##
 
-```bash
 cd client
 npm install
 npm run dev
-```
 
-### Backend
+##Backend##
 
-```bash
 cd server
 npm install
 npm start
-```
 
-## 🔑 Environment Variables
+##AI Service##
 
-Create a `.env` file inside the **server** folder.
+cd ai
+pip install -r requirements.txt
+python app.py
 
-```env
+##🔑 Environment Variables##
+
 PORT=5000
 MONGO_URI=YOUR_MONGODB_URI
 JWT_SECRET=YOUR_SECRET_KEY
-Wether_API= Your_Wether_API
-```
 
+##🤖 AI Prediction API##
 
-## 🎯 Future Enhancements
+The project includes a dedicated Python Flask AI service for energy demand prediction.
 
-- 🤖 AI Chat Assistant
-- 📊 Energy Consumption Prediction
-- 🔔 Smart Notifications
-- 🌍 Multi-language Support
+Frontend
+   ↓
+Node.js / Express Backend
+   ↓
+Python Flask AI API
+   ↓
+Machine Learning Model
+   ↓
+AI Energy Prediction
 
-## 🤝 Contributing
+The AI service accepts parameters such as:
 
+hour
+temperature
+
+##🌦️ Weather Integration##
+
+The platform integrates real-time weather information to display:
+🌡️ Temperature
+💧 Humidity
+💨 Wind Speed
+📍 City Information
+
+Weather data is fetched through the backend and displayed on the dashboard.
+
+##📊 Real-Time Analytics##
+
+The dashboard provides live energy analytics including:
+⚡ Current Load
+🤖 AI Prediction
+☀️ Solar Output
+⚡ Grid Frequency
+🔌 Voltage
+📈 Live Power Charts
+
+Analytics data is automatically refreshed to provide a real-time monitoring experience.
+
+##🔐 Authentication##
+The application uses JWT-based authentication with:
+User Registration
+Secure Login
+Password Hashing
+JWT Token Generation
+Dynamic User Name Display
+Each logged-in user sees their own name on the dashboard.
+
+##🎯 Future Enhancements##
+
+🤖 AI Chat Assistant
+🔔 Smart Energy Alerts
+🌦️ Weather-Based AI Prediction
+📊 Historical Energy Analytics
+☀️ Solar Energy Optimization
+🌍 Multi-language Support
+
+##🤝 Contributing##
 Contributions are welcome!
 
-1. Fork the repository
-2. Create a new branch
-3. Commit your changes
-4. Push your branch
-5. Open a Pull Request
+1.Fork the repository
+2.Create a new branch
+3.Commit your changes
+4.Push your branch
+5.Open a Pull Request
 
-## 👨‍💻 Developer
-
-**Raghav Gupta**
-
+##👨‍💻 Developer##
+Raghav Gupta
 📧 Email: raghavgupta805288@gmail.com
-
 🌐 GitHub: https://github.com/Raghav335
 
-## 📄 License
-
+##📄 License##
 This project is licensed under the MIT License.
 
----
-
-⭐ If you like this project, don't forget to star the repository!
+##⭐ If you like this project, don't forget to star the repository.##
