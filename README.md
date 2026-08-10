@@ -4,11 +4,19 @@ An AI-powered web application designed to monitor, analyze, and predict energy c
 
 ## 🌐 Live Demo
 
+<<<<<<< Updated upstream
 https://ai-energy-optimizer-zeta.vercel.app
+=======
+🚀 **Frontend:** https://ai-energy-optimizer-zeta.vercel.app
+
+⚙️ **Backend:** https://ai-energy-optimizer-backend.onrender.com
+
+🤖 **AI API:** https://ai-energy-optimizer-fjjy.onrender.com
+>>>>>>> Stashed changes
 
 ## ✨ Features
 
-- 🔐 Secure User Authentication (JWT)
+- 🔐 Secure User Authentication using JWT
 - 👤 User Registration & Login
 - 🧑‍💻 Dynamic Logged-in User Profile
 - 📊 Interactive Energy Analytics Dashboard
@@ -19,9 +27,13 @@ https://ai-energy-optimizer-zeta.vercel.app
 - 🌦️ Real-Time Weather Data
 - ☀️ Solar Output Monitoring
 - ⚡ Grid Frequency Monitoring
+<<<<<<< Updated upstream
+=======
+- 🔌 Voltage Monitoring
+>>>>>>> Stashed changes
 - 🌙 Modern & Responsive UI
 - 📱 Mobile-Friendly Design
-- ☁️ Cloud Deployment (Vercel + Render)
+- ☁️ Cloud Deployment using Vercel & Render
 
 ## 🛠️ Tech Stack
 
@@ -43,6 +55,11 @@ https://ai-energy-optimizer-zeta.vercel.app
 - JWT Authentication
 - bcrypt.js
 - Axios
+<<<<<<< Updated upstream
+=======
+- CORS
+- dotenv
+>>>>>>> Stashed changes
 
 ### AI / Machine Learning
 
@@ -85,25 +102,47 @@ AI-Energy-Optimizer/
 │   └── data/
 │
 └── README.md
+<<<<<<< Updated upstream
+=======
+```
+>>>>>>> Stashed changes
 
 ##🚀 Installation ##
 
+<<<<<<< Updated upstream
 #Clone Repository#
 git clone https://github.com/Raghav335/AI-Energy-Optimizer.git
 cd AI-Energy-Optimizer
 
 ##Frontend##
+=======
+### 1. Clone Repository
+
+```bash
+git clone https://github.com/Raghav335/AI-Energy-Optimizer.git
+cd AI-Energy-Optimizer
+```
+
+### 2. Frontend Setup
+>>>>>>> Stashed changes
 
 cd client
 npm install
 npm run dev
 
+<<<<<<< Updated upstream
 ##Backend##
+=======
+### 3. Backend Setup
+
+Open a new terminal:
+>>>>>>> Stashed changes
 
 cd server
 npm install
 npm start
 
+<<<<<<< Updated upstream
 ##AI Service##
 
 cd ai
@@ -111,15 +150,106 @@ pip install -r requirements.txt
 python app.py
 
 ##🔑 Environment Variables##
+=======
+### 4. AI Service Setup
+
+Open another terminal:
+
+```bash
+cd ai
+pip install -r requirements.txt
+python app.py
+```
+
+## 🔑 Environment Variables
+
+Create a `.env` file inside the **server** folder:
+>>>>>>> Stashed changes
 
 PORT=5000
 MONGO_URI=YOUR_MONGODB_URI
 JWT_SECRET=YOUR_SECRET_KEY
+<<<<<<< Updated upstream
 
 ##🤖 AI Prediction API##
+=======
+```
+
+> ⚠️ Never commit your `.env` file or private credentials to GitHub.
+
+## 🤖 AI Prediction
 
 The project includes a dedicated Python Flask AI service for energy demand prediction.
 
+### AI Architecture
+
+```text
+React Frontend
+      ↓
+Node.js / Express Backend
+      ↓
+Python Flask AI API
+      ↓
+Machine Learning Model
+      ↓
+AI Energy Prediction
+```
+
+The AI service accepts parameters such as:
+
+```text
+hour
+temperature
+```
+
+Example request:
+
+```text
+/predict?hour=14&temperature=32
+```
+
+The prediction is then returned through the backend and displayed on the dashboard.
+
+## 🌦️ Weather Integration
+
+The platform integrates real-time weather information and displays:
+
+- 🌡️ Temperature
+- 💧 Humidity
+- 💨 Wind Speed
+- 📍 City Information
+
+Weather data is fetched through the backend and displayed directly on the dashboard.
+
+## 📊 Real-Time Analytics
+
+The dashboard provides live energy analytics including:
+
+- ⚡ Current Load
+- 🤖 AI Prediction
+- ☀️ Solar Output
+- ⚡ Grid Frequency
+- 🔌 Voltage
+- 📈 Live Power Charts
+
+Analytics data is automatically refreshed to provide a real-time monitoring experience.
+
+## 🔐 Authentication
+
+The application uses JWT-based authentication with:
+
+- User Registration
+- Secure Login
+- Password Hashing
+- JWT Token Generation
+- Dynamic User Name Display
+
+Each logged-in user sees their own name on the dashboard.
+>>>>>>> Stashed changes
+
+The project includes a dedicated Python Flask AI service for energy demand prediction.
+
+<<<<<<< Updated upstream
 Frontend
    ↓
 Node.js / Express Backend
@@ -129,6 +259,14 @@ Python Flask AI API
 Machine Learning Model
    ↓
 AI Energy Prediction
+=======
+- 🤖 AI Chat Assistant
+- 🔔 Smart Energy Alerts
+- 🌦️ Advanced Weather-Based AI Prediction
+- 📊 Historical Energy Analytics
+- ☀️ Solar Energy Optimization
+- 🌍 Multi-language Support
+>>>>>>> Stashed changes
 
 The AI service accepts parameters such as:
 
@@ -192,4 +330,10 @@ Raghav Gupta
 ##📄 License##
 This project is licensed under the MIT License.
 
+<<<<<<< Updated upstream
 ##⭐ If you like this project, don't forget to star the repository.##
+=======
+---
+
+⭐ If you like this project, don't forget to star the repository!
+>>>>>>> Stashed changes
