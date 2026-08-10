@@ -35,35 +35,31 @@ app.get("/", (req, res) => {
 // 🔥 Real-Time Analytics API + AI Prediction
 app.get("/api/analytics", async (req, res) => {
   try {
-    const currentLoad = Math.floor(Math.random() * 2500) + 6500;
-
     const hour = new Date().getHours();
+    const temperature = 32;
 
-    const temperature = Number(req.query.temperature) || 32;
-
-    const aiResponse = await axios.get(
-      "https://ai-energy-optimizer-fjjy.onrender.com/predict",
-      {
-        params: {
-          hour,
-          temperature,
-        },
-      }
+    const aiResponse = await fetch(
+      `https://ai-energy-optimizer-fjjy.onrender.com/predict?hour=${hour}&temperature=${temperature}`
     );
 
-    const predictedLoad = aiResponse.data.prediction;
+    if (!aiResponse.ok) {
+      throw new Error(`AI API returned ${aiResponse.status}`);
+    }
+
+    const aiData = await aiResponse.json();
+
+    const currentLoad = Math.floor(Math.random() * 2500) + 6500;
 
     res.json({
       success: true,
       currentLoad,
-      predictedLoad,
+      predictedLoad: aiData.prediction,
       solarOutput: Math.floor(Math.random() * 1200) + 1800,
       gridFrequency: (49.8 + Math.random() * 0.4).toFixed(2),
       voltage: Math.floor(Math.random() * 20) + 220,
       temperature,
-      hour,
-      aiPowered: true,
-      timestamp: new Date(),
+      aiPrediction: aiData.prediction,
+      timestamp: new Date()
     });
 
   } catch (error) {
@@ -72,6 +68,7 @@ app.get("/api/analytics", async (req, res) => {
     res.status(500).json({
       success: false,
       message: "AI analytics failed",
+      error: error.message
     });
   }
 });
