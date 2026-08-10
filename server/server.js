@@ -1,4 +1,5 @@
 import express from "express";
+import axios from "axios";
 import cors from "cors";
 import dotenv from "dotenv";
 
@@ -31,19 +32,48 @@ app.get("/", (req, res) => {
   });
 });
 
-// 🔥 Real-Time Analytics API
-app.get("/api/analytics", (req, res) => {
-  const currentLoad = Math.floor(Math.random() * 2500) + 6500;
+// 🔥 Real-Time Analytics API + AI Prediction
+app.get("/api/analytics", async (req, res) => {
+  try {
+    const currentLoad = Math.floor(Math.random() * 2500) + 6500;
 
-  res.json({
-    success: true,
-    currentLoad,
-    predictedLoad: currentLoad + Math.floor(Math.random() * 300),
-    solarOutput: Math.floor(Math.random() * 1200) + 1800,
-    gridFrequency: (49.8 + Math.random() * 0.4).toFixed(2),
-    voltage: Math.floor(Math.random() * 20) + 220,
-    timestamp: new Date(),
-  });
+    const hour = new Date().getHours();
+
+    const temperature = Number(req.query.temperature) || 32;
+
+    const aiResponse = await axios.get(
+      "https://ai-energy-optimizer-fjjy.onrender.com/predict",
+      {
+        params: {
+          hour,
+          temperature,
+        },
+      }
+    );
+
+    const predictedLoad = aiResponse.data.prediction;
+
+    res.json({
+      success: true,
+      currentLoad,
+      predictedLoad,
+      solarOutput: Math.floor(Math.random() * 1200) + 1800,
+      gridFrequency: (49.8 + Math.random() * 0.4).toFixed(2),
+      voltage: Math.floor(Math.random() * 20) + 220,
+      temperature,
+      hour,
+      aiPowered: true,
+      timestamp: new Date(),
+    });
+
+  } catch (error) {
+    console.error("AI Analytics Error:", error.message);
+
+    res.status(500).json({
+      success: false,
+      message: "AI analytics failed",
+    });
+  }
 });
 
 // Start Server
