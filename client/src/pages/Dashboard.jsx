@@ -68,7 +68,7 @@ function Dashboard() {
 
 <h1 className="text-4xl md:text-5xl font-extrabold text-gray-800">
 
-Welcome Back, Raghav 👋
+Welcome Back, {localStorage.getItem("userName") || "User"} 👋
 
 </h1>
 
@@ -135,7 +135,7 @@ R
 
 <h3 className="font-bold">
 
-Raghav Gupta
+{localStorage.getItem("userName") || "User"}
 
 </h3>
 

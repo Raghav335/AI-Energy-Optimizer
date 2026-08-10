@@ -20,6 +20,7 @@ function Login() {
       });
 
       localStorage.setItem("token", res.data.token);
+localStorage.setItem("userName", res.data.name);
 
       navigate("/dashboard");
     } catch (error) {
