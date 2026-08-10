@@ -139,6 +139,7 @@ Create a `.env` file inside the **server** folder:
 PORT=5000
 MONGO_URI=YOUR_MONGODB_URI
 JWT_SECRET=YOUR_SECRET_KEY
+AI_API_URL=Your_BACKEND_URL
 ```
 
 > ⚠️ Never commit your `.env` file or private credentials to GitHub.
