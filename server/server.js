@@ -38,15 +38,20 @@ app.get("/api/analytics", async (req, res) => {
     const hour = new Date().getHours();
     const temperature = 32;
 
-    const aiResponse = await fetch(
-      `https://ai-energy-optimizer-fjjy.onrender.com/predict?hour=${hour}&temperature=${temperature}`
-    );
+    const aiResponse = await axios.get(
+  `${process.env.AI_API_URL}/predict`,
+  {
+    params: {
+      hour,
+      temperature,
+    },
+    timeout: 60000,
+  }
+);
 
-    if (!aiResponse.ok) {
-      throw new Error(`AI API returned ${aiResponse.status}`);
-    }
+const aiData = aiResponse.data;
 
-    const aiData = await aiResponse.json();
+    
 
     const currentLoad = Math.floor(Math.random() * 2500) + 6500;
 
