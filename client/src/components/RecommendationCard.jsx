@@ -3,26 +3,62 @@ import {
   Lightbulb,
   BatteryCharging,
   Sparkles,
+  TrendingUp,
+  Thermometer,
 } from "lucide-react";
 
 function RecommendationCard({ power, weather }) {
-  let recommendation = "Grid operating normally.";
-  let action = "Continue real-time monitoring.";
+  const currentLoad = Number(power?.currentLoad || 0);
+  const predictedLoad = Number(power?.predictedLoad || 0);
+  const temperature = Number(weather?.temperature || 0);
+
+  let recommendation = "Grid Operating Normally";
+  let action = "Continue real-time energy monitoring.";
   let color = "text-green-600";
   let bg = "bg-green-50";
+  let icon = <Lightbulb className="text-green-600" />;
 
-  if (power?.currentLoad > 8500) {
-    recommendation = "Increase Solar Generation";
-    action = "Use available renewable energy to reduce grid load.";
-    color = "text-yellow-600";
-    bg = "bg-yellow-50";
-  }
-
-  if (power?.currentLoad > 9000) {
-    recommendation = "Shift Industrial Load";
-    action = "Move heavy industrial consumption to off-peak hours.";
+  // AI prediction is significantly higher than current load
+  if (
+    predictedLoad > currentLoad &&
+    predictedLoad - currentLoad >= 500
+  ) {
+    recommendation = "High Demand Expected";
+    action =
+      "AI predicts a significant increase in energy demand. Consider reducing non-essential loads.";
     color = "text-red-600";
     bg = "bg-red-50";
+    icon = <TrendingUp className="text-red-600" />;
+  }
+
+  // High current load
+  else if (currentLoad > 9000) {
+    recommendation = "Shift Energy Usage";
+    action =
+      "Current demand is high. Move heavy energy consumption to off-peak hours.";
+    color = "text-orange-600";
+    bg = "bg-orange-50";
+    icon = <BatteryCharging className="text-orange-600" />;
+  }
+
+  // High temperature
+  else if (temperature >= 35) {
+    recommendation = "High Temperature Alert";
+    action =
+      "High temperature may increase cooling demand. Optimize AC and cooling systems.";
+    color = "text-yellow-600";
+    bg = "bg-yellow-50";
+    icon = <Thermometer className="text-yellow-600" />;
+  }
+
+  // Moderate AI increase
+  else if (predictedLoad > currentLoad) {
+    recommendation = "Optimize Energy Usage";
+    action =
+      "AI predicts a moderate increase in demand. Consider using energy-efficient appliances.";
+    color = "text-blue-600";
+    bg = "bg-blue-50";
+    icon = <Sparkles className="text-blue-600" />;
   }
 
   return (
@@ -43,9 +79,7 @@ function RecommendationCard({ power, weather }) {
         </div>
 
         <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-violet-500 to-indigo-600 flex items-center justify-center shadow-lg">
-
           <Bot className="text-white" size={30} />
-
         </div>
 
       </div>
@@ -56,7 +90,7 @@ function RecommendationCard({ power, weather }) {
 
         <div className="flex items-center gap-2">
 
-          <Lightbulb className={color} />
+          {icon}
 
           <h3 className={`text-xl font-bold ${color}`}>
             {recommendation}
@@ -109,7 +143,8 @@ function RecommendationCard({ power, weather }) {
       <div className="mt-6 border-t pt-4">
 
         <p className="text-sm text-gray-500">
-          🤖 AI analyzes weather, demand, and renewable energy to provide real-time recommendations.
+          🤖 AI analyzes demand and weather conditions to provide
+          real-time energy recommendations.
         </p>
 
       </div>
