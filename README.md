@@ -4,15 +4,11 @@ An AI-powered web application designed to monitor, analyze, and predict energy c
 
 ## 🌐 Live Demo
 
-<<<<<<< Updated upstream
-https://ai-energy-optimizer-zeta.vercel.app
-=======
 🚀 **Frontend:** https://ai-energy-optimizer-zeta.vercel.app
 
 ⚙️ **Backend:** https://ai-energy-optimizer-backend.onrender.com
 
 🤖 **AI API:** https://ai-energy-optimizer-fjjy.onrender.com
->>>>>>> Stashed changes
 
 ## ✨ Features
 
@@ -27,10 +23,7 @@ https://ai-energy-optimizer-zeta.vercel.app
 - 🌦️ Real-Time Weather Data
 - ☀️ Solar Output Monitoring
 - ⚡ Grid Frequency Monitoring
-<<<<<<< Updated upstream
-=======
 - 🔌 Voltage Monitoring
->>>>>>> Stashed changes
 - 🌙 Modern & Responsive UI
 - 📱 Mobile-Friendly Design
 - ☁️ Cloud Deployment using Vercel & Render
@@ -55,11 +48,8 @@ https://ai-energy-optimizer-zeta.vercel.app
 - JWT Authentication
 - bcrypt.js
 - Axios
-<<<<<<< Updated upstream
-=======
 - CORS
 - dotenv
->>>>>>> Stashed changes
 
 ### AI / Machine Learning
 
@@ -102,20 +92,10 @@ AI-Energy-Optimizer/
 │   └── data/
 │
 └── README.md
-<<<<<<< Updated upstream
-=======
 ```
->>>>>>> Stashed changes
 
-##🚀 Installation ##
+## 🚀 Installation
 
-<<<<<<< Updated upstream
-#Clone Repository#
-git clone https://github.com/Raghav335/AI-Energy-Optimizer.git
-cd AI-Energy-Optimizer
-
-##Frontend##
-=======
 ### 1. Clone Repository
 
 ```bash
@@ -124,33 +104,23 @@ cd AI-Energy-Optimizer
 ```
 
 ### 2. Frontend Setup
->>>>>>> Stashed changes
 
+```bash
 cd client
 npm install
 npm run dev
+```
 
-<<<<<<< Updated upstream
-##Backend##
-=======
 ### 3. Backend Setup
 
 Open a new terminal:
->>>>>>> Stashed changes
 
+```bash
 cd server
 npm install
 npm start
+```
 
-<<<<<<< Updated upstream
-##AI Service##
-
-cd ai
-pip install -r requirements.txt
-python app.py
-
-##🔑 Environment Variables##
-=======
 ### 4. AI Service Setup
 
 Open another terminal:
@@ -164,15 +134,11 @@ python app.py
 ## 🔑 Environment Variables
 
 Create a `.env` file inside the **server** folder:
->>>>>>> Stashed changes
 
+```env
 PORT=5000
 MONGO_URI=YOUR_MONGODB_URI
 JWT_SECRET=YOUR_SECRET_KEY
-<<<<<<< Updated upstream
-
-##🤖 AI Prediction API##
-=======
 ```
 
 > ⚠️ Never commit your `.env` file or private credentials to GitHub.
@@ -245,95 +211,38 @@ The application uses JWT-based authentication with:
 - Dynamic User Name Display
 
 Each logged-in user sees their own name on the dashboard.
->>>>>>> Stashed changes
 
-The project includes a dedicated Python Flask AI service for energy demand prediction.
+## 🎯 Future Enhancements
 
-<<<<<<< Updated upstream
-Frontend
-   ↓
-Node.js / Express Backend
-   ↓
-Python Flask AI API
-   ↓
-Machine Learning Model
-   ↓
-AI Energy Prediction
-=======
 - 🤖 AI Chat Assistant
 - 🔔 Smart Energy Alerts
 - 🌦️ Advanced Weather-Based AI Prediction
 - 📊 Historical Energy Analytics
 - ☀️ Solar Energy Optimization
 - 🌍 Multi-language Support
->>>>>>> Stashed changes
 
-The AI service accepts parameters such as:
+## 🤝 Contributing
 
-hour
-temperature
-
-##🌦️ Weather Integration##
-
-The platform integrates real-time weather information to display:
-🌡️ Temperature
-💧 Humidity
-💨 Wind Speed
-📍 City Information
-
-Weather data is fetched through the backend and displayed on the dashboard.
-
-##📊 Real-Time Analytics##
-
-The dashboard provides live energy analytics including:
-⚡ Current Load
-🤖 AI Prediction
-☀️ Solar Output
-⚡ Grid Frequency
-🔌 Voltage
-📈 Live Power Charts
-
-Analytics data is automatically refreshed to provide a real-time monitoring experience.
-
-##🔐 Authentication##
-The application uses JWT-based authentication with:
-User Registration
-Secure Login
-Password Hashing
-JWT Token Generation
-Dynamic User Name Display
-Each logged-in user sees their own name on the dashboard.
-
-##🎯 Future Enhancements##
-
-🤖 AI Chat Assistant
-🔔 Smart Energy Alerts
-🌦️ Weather-Based AI Prediction
-📊 Historical Energy Analytics
-☀️ Solar Energy Optimization
-🌍 Multi-language Support
-
-##🤝 Contributing##
 Contributions are welcome!
 
-1.Fork the repository
-2.Create a new branch
-3.Commit your changes
-4.Push your branch
-5.Open a Pull Request
+1. Fork the repository
+2. Create a new branch
+3. Commit your changes
+4. Push your branch
+5. Open a Pull Request
 
-##👨‍💻 Developer##
-Raghav Gupta
+## 👨‍💻 Developer
+
+**Raghav Gupta**
+
 📧 Email: raghavgupta805288@gmail.com
+
 🌐 GitHub: https://github.com/Raghav335
 
-##📄 License##
+## 📄 License
+
 This project is licensed under the MIT License.
 
-<<<<<<< Updated upstream
-##⭐ If you like this project, don't forget to star the repository.##
-=======
 ---
 
-⭐ If you like this project, don't forget to star the repository!
->>>>>>> Stashed changes
+⭐ If you like this project, don't forget to star the repository.
