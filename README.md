@@ -1,6 +1,9 @@
 # ⚡ AI Energy Optimizer
 
-An AI-powered web application designed to monitor, analyze, and predict energy consumption. The platform combines real-time energy analytics, weather data, secure authentication, interactive charts, and a Python-based Machine Learning service to provide intelligent energy insights.
+AI Energy Optimizer is an AI-powered web application designed to monitor, analyze, and optimize electricity consumption. The platform combines React.js, Node.js, MongoDB, Python, Flask, and Machine Learning to provide real-time energy monitoring and intelligent demand prediction.
+
+It includes secure JWT authentication, dynamic user profiles, live energy analytics, AI-based predictions, smart energy recommendations, grid alerts, weather integration, solar output monitoring, and interactive charts.
+The system uses a dedicated Python Flask AI service to predict energy demand based on parameters such as time and temperature, while the React dashboard presents these insights through a modern and responsive interface.
 
 ## 🌐 Live Demo
 
